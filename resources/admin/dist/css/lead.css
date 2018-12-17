@@ -1,0 +1,39 @@
+.delete-construction, .delete-prop-constr, .delete-prop-constr-in-edit{
+    background: transparent;
+    border: none;
+    color: #0073b2;
+    padding: 0;
+}
+#loader{
+    visibility: hidden;
+}
+td {
+    font-size: 15px;
+}
+
+.building{
+    font-size: 17px;
+}
+.actions{
+    border: 1px solid #1ab7ea;
+    padding: 10px;
+    border-radius: 50%;
+
+}
+input[type='file'] {
+    color: transparent;
+}
+.remove-img{
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
+.images-group{
+    display: flex;
+}
+img{
+    display: flex;
+    margin: 5px;
+}
+
