@@ -19,8 +19,6 @@
                             <label for="exampleInputEmail1">Название</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Введите название района" name="title">
                         </div>
-                        <input type="file" name="images[]" required multiple
-                               title="Загрузите одну или несколько фотографий">
                         <div class="form-group">
                             <label>Город</label>
                             {{Form::select('city_id',

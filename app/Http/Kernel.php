@@ -41,6 +41,10 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
+        'admin_manager' => [
+            \App\Http\Middleware\AdminMiddleware::class,
+            \App\Http\Middleware\ContentManagerMiddleware::class
+        ]
     ];
 
     /**
@@ -60,7 +64,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'admin' => \App\Http\Middleware\AdminMiddleware::class
+        'admin' => \App\Http\Middleware\AdminMiddleware::class,
+        'content_manager' => \App\Http\Middleware\ContentManagerMiddleware::class
     ];
 
     /**

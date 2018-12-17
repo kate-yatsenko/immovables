@@ -23,12 +23,14 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 @if(Auth::check())
-                    <a class="nav-item nav-link" href="{{route('constructions.index')}}">Admin Panel</a>
                     <a class="nav-item nav-link" href="/profile">My profile</a>
                     <a class="nav-item nav-link" href="/logout">Logout</a>
                 @else
                     <a class="nav-item nav-link" href="/register">Register</a>
                     <a class="nav-item nav-link" href="/login">Login</a>
+                @endif
+                @if(Auth::check() && !(Auth::user()->isCommonUser(Auth::user()->role_id)))
+                    <a class="nav-item nav-link" href="{{route('constructions.index')}}">Admin Panel</a>
                 @endif
             </div>
         </div>

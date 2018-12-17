@@ -94,7 +94,6 @@ class Construction extends Model
             return '/img/no-image.png';
         }
         return $this->images;
-
     }
 
     public function setCategory($id)

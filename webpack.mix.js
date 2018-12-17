@@ -24,6 +24,7 @@ mix.styles([
     'resources/admin/dist/css/lead.css'
 ], 'public/css/admin.css');
 
+
 mix.scripts([
     'resources/admin/plugins/jQuery/jquery-2.2.3.min.js',
     'resources/admin/bootstrap/js/bootstrap.min.js',
@@ -39,6 +40,8 @@ mix.scripts([
     'resources/admin/dist/js/scripts.js',
     'resources/admin/dist/js/ajax.js'
 ], 'public/js/admin.js');
+
+
 
 mix.copy('resources/admin/bootstrap/fonts', 'public/fonts');
 mix.copy('resources/admin/dist/fonts', 'public/fonts');

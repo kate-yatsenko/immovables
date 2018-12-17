@@ -6,7 +6,7 @@ use Closure;
 use Auth;
 use App\User;
 
-class AdminMiddleware
+class ContentManagerMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class AdminMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::check() && Auth::user()->role_id==User::ADMIN) {
+        if(Auth::check() && Auth::user()->role_id==User::CONTENT_MANAGER) {
             return $next($request);
         }
         abort(404);
